@@ -1,10 +1,10 @@
-import { MenuItem, type MenuItemProps } from 'react-aria-components';
-import { cn } from '@heroui/react';
+import { MenuItem, type MenuItemProps } from "react-aria-components";
+import { cn } from "@heroui/react";
 import {
   COUNTRIES,
   type HeroTelInputCountry,
-} from '../../constants/countries.js';
-import { Flag } from '../Flag/Flag.js';
+} from "../../constants/countries.js";
+import { Flag } from "../Flag/Flag.js";
 
 export type FlagMenuItemProps = MenuItemProps & {
   isoCode: HeroTelInputCountry | null;
@@ -27,12 +27,9 @@ export const FlagMenuItem = (props: FlagMenuItemProps) => {
       textValue={name}
       aria-label={isoCode ? `${name} - ${isoCode}` : name}
       className={cn(
-        'group box-border flex w-full cursor-default items-center rounded-md px-3 py-2 outline-none',
-        'pressed:bg-primary/80 focus:text-foreground text-foreground-900 focus:bg-primary',
-        menuItem,
-        {
-          'bg-primary': active,
-        }
+        "group box-border flex w-full cursor-default items-center rounded-md px-3 py-2 outline-none",
+        "pressed:bg-primary/80 focus:text-foreground text-foreground-900 focus:bg-primary",
+        menuItem
       )}
     >
       <div className="flex w-full flex-row items-center gap-2 p-1">
